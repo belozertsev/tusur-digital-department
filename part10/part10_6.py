@@ -16,15 +16,14 @@ def maximum_below(level, lst):
     flag = 0
     counter = 0
     for val in lst:
-
         if val >= level:
             counter += 1
             flag = 1
-        # Заканчиваем считать
         if flag and val < level:
             flag = 0
             buffer.append(counter * level)
             counter = 0
+            
     return max(buffer)
 
 def maximum_overall(lst):
